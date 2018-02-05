@@ -1,0 +1,23 @@
+
+The main network strcuture is in this Network.py 
+and Loader.py is used to load the image file.
+
+To load the image file by using the 
+following commands:
+
+>>> import mnist_loader
+>>> training_data, validation_data, test_data = \
+... mnist_loader.load_data_wrapper()
+
+
+After loading the image file 
+setting up a Network with 30 hidden neurons
+
+>>> import network
+>>> net = network.Network([784, 30, 10])
+
+The stochastic gradient is used to learn from the MNIST training_data 
+with a mini-batch size of 10, and a learning rate of mu=3.0 mu=3.0,
+
+>>> net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
+
