@@ -22,7 +22,7 @@ def load_data():
     containing 50,000 entries.
     The ``validation_data`` and ``test_data`` are similar, except
     each contains only 10,000 images."""
-    f = gzip.open('../data/mnist.pkl.gz', 'rb')
+    f = gzip.open('../Data/mnist.pkl.gz', 'rb')
     training_data, validation_data, test_data = cPickle.load(f)
     f.close()
     return (training_data, validation_data, test_data)
